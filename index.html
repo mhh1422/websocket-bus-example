@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://vuejs.org/js/vue.min.js"></script>
+    <title>WebSocket</title>
+</head>
+
+<body>
+    <div id="app">
+        {{message}}
+    </div>
+    <script language="js" type="text/javascript">
+        const ws = new WebSocket("ws://localhost:3003/");
+        var app = new Vue({
+            el: '#app',
+            data: {
+                message: 'Hello Vue!'
+            }
+        });
+    </script>
+</body>
+
+</html>
